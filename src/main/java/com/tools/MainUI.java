@@ -76,9 +76,9 @@ public class MainUI {
 
     private static void showQRCodeGeneratorDialog() {
         JDialog dialog = new JDialog((Frame) null, "生成二维码", true);
-        dialog.setSize(700, 400);
+        dialog.setSize(750, 500);
         dialog.setLocationRelativeTo(null);
-        dialog.setResizable(false);
+        dialog.setResizable(true);
 
         JPanel mainPanel = new JPanel(new BorderLayout());
         mainPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
@@ -105,7 +105,7 @@ public class MainUI {
 
         JPanel rightPanel = new JPanel(new BorderLayout());
         JLabel qrCodeLabel = new JLabel("", JLabel.CENTER);
-        qrCodeLabel.setPreferredSize(new Dimension(300, 300));
+        qrCodeLabel.setMinimumSize(new Dimension(200, 200));
         rightPanel.add(qrCodeLabel, BorderLayout.CENTER);
 
         JLabel rightLabel = new JLabel("二维码预览", JLabel.CENTER);
